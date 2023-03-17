@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`compaction dialog matches snapshot 1`] = `
+<Blueprint3.Dialog
+  canOutsideClickClose={false}
+  className="compaction-dialog"
+  isOpen={true}
+  onClose={[Function]}
+  title="Compaction config: test"
+>
+  <AutoForm
+    fields={
+      Array [
+        Object {
+          "defaultValue": 419430400,
+          "info": <p>
+            Maximum number of total segment bytes processed per compaction task. Since a time chunk must be processed in its entirety, if the segments for a particular time chunk have a total size in bytes greater than this parameter, compaction will not run for that time chunk. Because each compaction task runs with a single thread, setting this value too far above 1–2GB will result in compaction tasks taking an excessive amount of time.
+          </p>,
+          "name": "inputSegmentSizeBytes",
+          "type": "number",
+        },
+        Object {
+          "defaultValue": "P1D",
+          "info": <p>
+            The offset for searching segments to be compacted. Strongly recommended to set for realtime dataSources.
+          </p>,
+          "name": "skipOffsetFromLatest",
+          "type": "string",
+        },
+        Object {
+          "defaultValue": 5000000,
+          "info": <p>
+            Determines how many rows are in each segment.
+          </p>,
+          "name": "maxRowsPerSegment",
+          "type": "number",
+        },
+        Object {
+          "info": <p>
+            <Memo(ExternalLink)
+              href="https://druid.apache.org/docs/0.19.0/ingestion/tasks.html#task-context"
+            >
+              Task context
+            </Memo(ExternalLink)>
+             
+            for compaction tasks.
+          </p>,
+          "name": "taskContext",
+          "type": "json",
+        },
+        Object {
+          "defaultValue": 25,
+          "info": <p>
+            Priority of the compaction task.
+          </p>,
+          "name": "taskPriority",
+          "type": "number",
+        },
+        Object {
+          "info": <p>
+            <Memo(ExternalLink)
+              href="https://druid.apache.org/docs/0.19.0/configuration/index.html#compact-task-tuningconfig"
+            >
+              Tuning config
+            </Memo(ExternalLink)>
+             
+            for compaction tasks.
+          </p>,
+          "name": "tuningConfig",
+          "type": "json",
+        },
+      ]
+    }
+    model={Object {}}
+    onChange={[Function]}
+  />
+  <div
+    className="bp3-dialog-footer"
+  >
+    <div
+      className="bp3-dialog-footer-actions"
+    >
+      <Blueprint3.Button
+        disabled={false}
+        intent="danger"
+        onClick={[Function]}
+        text="Delete"
+      />
+      <Blueprint3.Button
+        onClick={[Function]}
+        text="Close"
+      />
+      <Blueprint3.Button
+        disabled={false}
+        intent="primary"
+        onClick={[Function]}
+        text="Submit"
+      />
+    </div>
+  </div>
+</Blueprint3.Dialog>
+`;
